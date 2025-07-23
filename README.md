@@ -1,12 +1,41 @@
-# React + Vite
+# 🎯 Cutoff Predictor
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A minimalistic, responsive web app that predicts college cutoffs based on user-entered scores or ranks for competitive exams like **JEE Mains**, **JEE Advanced**, and **BITSAT**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- 🔍 Predict college cutoffs based on score/rank
+- 📱 Responsive design using **Tailwind CSS**
+- ⚛️ Built with **React** and **Vite**
+- 🌙 Dark mode-friendly color palette
+- 🧠 ML-based prediction logic (coming soon)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🧪 Tech Stack
+
+| Layer       | Technology         |
+|-------------|--------------------|
+| Frontend    | React + Vite       |
+| Styling     | Tailwind CSS       |
+| Backend     | Planned            |
+| Deployment  | GitHub             |
+
+---
+
+## 📦 Installation
+
+```bash
+# Clone the repo
+git clone https://github.com/Foolish-Genius/predictor.git
+cd predictor
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+Made with ❤️ by Foolish Genius
