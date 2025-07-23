@@ -39,4 +39,25 @@ npm install
 npm run dev
 ```
 ---
+
+## 🛠️ Project Structure
+```
+src/
+├── components/
+│   └── InputForm.jsx
+├── App.jsx
+├── main.jsx
+└── index.css
+
+```
+---
+
+## 📈 Future Plans
+- Add ML model for dynamic cutoff predictions
+
+- Expand support to other exams (e.g., NEET, WBJEE)
+
+- Add graphical trends and college search
+
+---
 Made with ❤️ by Foolish Genius
