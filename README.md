@@ -60,4 +60,4 @@ src/
 - Add graphical trends and college search
 
 ---
-Made with ❤️ by Foolish Genius
+Made with ❤️ by Foolish Genius and Ranveer Dre
