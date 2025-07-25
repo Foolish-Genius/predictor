@@ -37,7 +37,7 @@ function App() {
 
       <div className="w-full sm:w-[400px] sm:h-full flex items-center justify-center p-6 bg-[#021c2e]">
         <div className="space-y-6 w-full">
-          <h1 className="text-4xl font-bold text-[#5c7c89] text-center">
+          <h1 className="text-4xl font-bold text-[#ffffff] text-center">
             Cutoff Predictor
           </h1>
           <InputForm onSubmit={handlePrediction} />
