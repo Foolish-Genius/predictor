@@ -1,33 +1,33 @@
-import { useState } from 'react';
-import { FaRocket, FaUniversity } from 'react-icons/fa';
+import { useState } from "react";
+import { FaRocket, FaUniversity } from "react-icons/fa";
 
 function InputForm({ onSubmit }) {
-  const [exam, setExam] = useState('jee_mains');
-  const [value, setValue] = useState('');
-  const [error, setError] = useState('');
+  const [exam, setExam] = useState("jee_mains");
+  const [value, setValue] = useState("");
+  const [error, setError] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
     if (!value || isNaN(value) || Number(value) <= 0) {
-      setError('Please enter a valid score or rank.');
+      setError("Please enter a valid score or rank.");
       return;
     }
 
-    setError('');
+    setError("");
     onSubmit({ exam, value: Number(value) });
   };
 
   const inputLabel = {
-    jee_mains: 'Enter JEE Mains Rank',
-    jee_advanced: 'Enter JEE Advanced Rank',
-    bitsat: 'Enter BITSAT Score',
+    jee_mains: "Enter JEE Mains Rank",
+    jee_advanced: "Enter JEE Advanced Rank",
+    bitsat: "Enter BITSAT Score",
   };
 
   const inputPlaceholder = {
-    jee_mains: 'e.g. 1234',
-    jee_advanced: 'e.g. 456',
-    bitsat: 'e.g. 320',
+    jee_mains: "e.g. 1234",
+    jee_advanced: "e.g. 456",
+    bitsat: "e.g. 320",
   };
 
   return (
@@ -64,7 +64,7 @@ function InputForm({ onSubmit }) {
           value={value}
           onChange={(e) => setValue(e.target.value)}
           className={`w-full p-3 rounded-lg bg-[#1f4959] text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#5c7c89] transition ${
-            error ? 'ring-2 ring-red-400' : ''
+            error ? "ring-2 ring-red-400" : ""
           }`}
           placeholder={inputPlaceholder[exam]}
         />
@@ -73,7 +73,7 @@ function InputForm({ onSubmit }) {
 
       <button
         type="submit"
-        className="w-full bg-[#5c7c89] text-[#011425] px-4 py-3 rounded-lg hover:bg-[#4a6b78] transition flex items-center justify-center gap-2 font-semibold"
+        className="w-full bg-[#ffffff] text-[#ffffff] px-4 py-3 rounded-lg hover:bg-[#ffffff] transition flex items-center justify-center gap-2 font-semibold"
       >
         <FaRocket className="text-[#011425] text-lg" />
         Predict Cutoffs
