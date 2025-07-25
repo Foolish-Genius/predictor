@@ -6,18 +6,6 @@ function InputForm({ onSubmit }) {
   const [value, setValue] = useState("");
   const [error, setError] = useState("");
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    if (!value || isNaN(value) || Number(value) <= 0) {
-      setError("Please enter a valid score or rank.");
-      return;
-    }
-
-    setError("");
-    onSubmit({ exam, value: Number(value) });
-  };
-
   const inputLabel = {
     jee_mains: "Enter JEE Mains Rank",
     jee_advanced: "Enter JEE Advanced Rank",
@@ -28,6 +16,29 @@ function InputForm({ onSubmit }) {
     jee_mains: "e.g. 1234",
     jee_advanced: "e.g. 456",
     bitsat: "e.g. 320",
+  };
+
+  const isValidInput = () => {
+    const num = Number(value);
+    if (isNaN(num) || num <= 0) return false;
+
+    if (exam === "bitsat" && num > 450) return false;
+    if (exam === "jee_mains" && num > 1000000) return false;
+    if (exam === "jee_advanced" && num > 200000) return false;
+
+    return true;
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (!isValidInput()) {
+      setError("Please enter a valid score or rank.");
+      return;
+    }
+
+    setError("");
+    onSubmit({ exam, value: Number(value) });
   };
 
   return (
@@ -63,12 +74,17 @@ function InputForm({ onSubmit }) {
           type="number"
           value={value}
           onChange={(e) => setValue(e.target.value)}
+          aria-describedby={error ? "score-error" : undefined}
           className={`w-full p-3 rounded-lg bg-[#1f4959] text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#5c7c89] transition ${
             error ? "ring-2 ring-red-400" : ""
           }`}
           placeholder={inputPlaceholder[exam]}
         />
-        {error && <p className="text-red-400 text-sm animate-pulse">{error}</p>}
+        {error && (
+          <p id="score-error" className="text-red-400 text-sm animate-pulse">
+            {error}
+          </p>
+        )}
       </div>
 
       <button
