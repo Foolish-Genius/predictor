@@ -73,7 +73,7 @@ function InputForm({ onSubmit }) {
 
       <button
         type="submit"
-        className="w-full bg-[#ffffff] text-[#ffffff] px-4 py-3 rounded-lg hover:bg-[#ffffff] transition flex items-center justify-center gap-2 font-semibold"
+        className="w-full bg-[#ffffff] text-[#011425] px-4 py-3 rounded-lg hover:bg-[#ffffff] transition flex items-center justify-center gap-2 font-semibold"
       >
         <FaRocket className="text-[#011425] text-lg" />
         Predict Cutoffs

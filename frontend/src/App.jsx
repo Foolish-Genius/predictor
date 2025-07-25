@@ -33,11 +33,11 @@ function App() {
   const rightColumn = results.slice(mid);
 
   return (
-    <div className="w-screen h-screen sm:overflow-hidden overflow-auto flex flex-col sm:flex-row bg-[#011425] text-white">
+    <div className="w-screen h-screen sm:overflow-hidden overflow-auto flex flex-col sm:flex-row bg-[#000] text-white">
 
-      <div className="w-full sm:w-[400px] sm:h-full flex items-center justify-center p-6 bg-[#021c2e]">
+      <div className="w-[32vw] bg-[#011425] text-white flex flex-col items-center justify-center p-6">
         <div className="space-y-6 w-full">
-          <h1 className="text-4xl font-bold text-[#ffffff] text-center">
+          <h1 className="text-4xl font-bold text-[#fff] text-center">
             Cutoff Predictor
           </h1>
           <InputForm onSubmit={handlePrediction} />
